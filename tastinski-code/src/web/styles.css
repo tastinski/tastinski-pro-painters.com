@@ -1,0 +1,279 @@
+/* Master Craftsmanship Typography - Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Nunito+Sans:ital,opsz,wght@0,6..12,300;0,6..12,400;0,6..12,500;0,6..12,600;0,6..12,700;1,6..12,300;1,6..12,400&display=swap');
+
+@import "tailwindcss";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-ring: var(--sidebar-ring);
+  
+  /* Master Craftsmanship Colors */
+  --color-sage: var(--sage);
+  --color-charcoal: var(--charcoal);
+  --color-cream: var(--cream);
+  --color-warm-white: var(--warm-white);
+  --color-forest: var(--forest);
+
+  /* Typography */
+  --font-cormorant: 'Cormorant Garamond', Georgia, serif;
+  --font-nunito: 'Nunito Sans', system-ui, sans-serif;
+}
+
+:root {
+  --radius: 0.5rem;
+  
+  /* Master Craftsmanship Palette */
+  --sage: #8B9D83;
+  --charcoal: #2C2C2C;
+  --cream: #FAF9F6;
+  --warm-white: #F5F4F0;
+  --forest: #4A5D52;
+  
+  /* Core palette */
+  --background: #FAF9F6; /* Warm Off-white */
+  --foreground: #2C2C2C; /* Charcoal */
+  --card: #FFFFFF;
+  --card-foreground: #2C2C2C;
+  --popover: #FFFFFF;
+  --popover-foreground: #2C2C2C;
+  
+  /* Primary: Charcoal */
+  --primary: #2C2C2C;
+  --primary-foreground: #FAF9F6;
+  
+  /* Secondary: Sage Green */
+  --secondary: #8B9D83;
+  --secondary-foreground: #FFFFFF;
+  
+  /* Muted tones */
+  --muted: #F5F4F0;
+  --muted-foreground: #6B6B6B;
+  
+  /* Accent: Deep Sage */
+  --accent: #8B9D83;
+  --accent-foreground: #FFFFFF;
+  
+  --destructive: #DC2626;
+  --border: #E8E6E1;
+  --input: #F5F4F0;
+  --ring: #8B9D83;
+  
+  /* Chart colors */
+  --chart-1: #8B9D83;
+  --chart-2: #4A5D52;
+  --chart-3: #2C2C2C;
+  --chart-4: #B5C4AE;
+  --chart-5: #3D4A42;
+  
+  /* Sidebar */
+  --sidebar: #F5F4F0;
+  --sidebar-foreground: #2C2C2C;
+  --sidebar-primary: #2C2C2C;
+  --sidebar-primary-foreground: #FAF9F6;
+  --sidebar-accent: #E8E6E1;
+  --sidebar-accent-foreground: #2C2C2C;
+  --sidebar-border: #E8E6E1;
+  --sidebar-ring: #8B9D83;
+}
+
+.dark {
+  --background: #1A1A1A;
+  --foreground: #FAF9F6;
+  --card: #242424;
+  --card-foreground: #FAF9F6;
+  --popover: #242424;
+  --popover-foreground: #FAF9F6;
+  --primary: #FAF9F6;
+  --primary-foreground: #1A1A1A;
+  --secondary: #8B9D83;
+  --secondary-foreground: #FFFFFF;
+  --muted: #2A2A2A;
+  --muted-foreground: #9A9A9A;
+  --accent: #8B9D83;
+  --accent-foreground: #FFFFFF;
+  --destructive: #EF4444;
+  --border: rgba(255, 255, 255, 0.1);
+  --input: rgba(255, 255, 255, 0.15);
+  --ring: #8B9D83;
+  --chart-1: #8B9D83;
+  --chart-2: #4A5D52;
+  --chart-3: #B5C4AE;
+  --chart-4: #6B8F71;
+  --chart-5: #3D4A42;
+  --sidebar: #1A1A1A;
+  --sidebar-foreground: #FAF9F6;
+  --sidebar-primary: #8B9D83;
+  --sidebar-primary-foreground: #FFFFFF;
+  --sidebar-accent: #2A2A2A;
+  --sidebar-accent-foreground: #FAF9F6;
+  --sidebar-border: rgba(255, 255, 255, 0.1);
+  --sidebar-ring: #8B9D83;
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  body {
+    @apply bg-background text-foreground;
+    font-family: 'Nunito Sans', system-ui, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  
+  /* Master Craftsmanship Typography System */
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-weight: 500;
+    letter-spacing: -0.01em;
+  }
+}
+
+/* Typography utility classes */
+.font-cormorant {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+}
+
+.font-nunito {
+  font-family: 'Nunito Sans', system-ui, sans-serif;
+}
+
+/* Warm image filter for premium home transformation vibe */
+.warm-filter {
+  filter: sepia(5%) saturate(105%) brightness(102%) contrast(98%);
+}
+
+/* Elegant shadow for cards */
+.craft-shadow {
+  box-shadow: 
+    0 1px 2px rgba(44, 44, 44, 0.03),
+    0 4px 8px rgba(44, 44, 44, 0.04),
+    0 12px 24px rgba(44, 44, 44, 0.05);
+}
+
+/* Hover shadow enhancement */
+.craft-shadow-hover {
+  box-shadow: 
+    0 2px 4px rgba(44, 44, 44, 0.04),
+    0 8px 16px rgba(44, 44, 44, 0.06),
+    0 24px 48px rgba(44, 44, 44, 0.08);
+}
+
+/* Subtle grain texture overlay */
+.grain-texture {
+  position: relative;
+}
+
+.grain-texture::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 400 400' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+  opacity: 0.02;
+  pointer-events: none;
+  mix-blend-mode: multiply;
+}
+
+/* Elegant divider */
+.craft-divider {
+  height: 1px;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    #E8E6E1 30%,
+    #E8E6E1 70%,
+    transparent
+  );
+}
+
+/* Smooth scroll behavior */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Selection styling */
+::selection {
+  background: #8B9D83;
+  color: #FFFFFF;
+}
+
+/* Focus styles */
+:focus-visible {
+  outline: 2px solid #8B9D83;
+  outline-offset: 2px;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #F5F4F0;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #D4D2CD;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #B5B3AE;
+}
+
+/* Hide Runable branding and badges */
+#website-editor__badge,
+#website-editor-root,
+[aria-label*="Runable"],
+[aria-label*="runable"],
+[class*="runable"],
+[id*="runable"],
+.runable-badge,
+.made-with-runable,
+a[href*="runable.com"],
+a[href*="runable.dev"] {
+  display: none !important;
+  visibility: hidden !important;
+  opacity: 0 !important;
+  pointer-events: none !important;
+  height: 0 !important;
+  width: 0 !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}
