@@ -219,7 +219,25 @@ export default function Index() {
 
   return (
     <div className="flex flex-col min-h-screen font-nunito bg-[#FAF9F6]">
+      {/* Fixed Header with Phone */}
+      <header className="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-sm border-b border-[#E8E6E1]">
+        <div className="container mx-auto px-6 lg:px-16 xl:px-24 py-4 flex justify-between items-center">
+          <div className="font-cormorant text-2xl font-medium text-[#2C2C2C]">
+            Tastinski
+          </div>
+          <a 
+            href="tel:3605048767" 
+            className="flex items-center gap-2 text-[#2C2C2C] hover:text-[#8B9D83] transition-colors duration-300"
+          >
+            <Phone className="w-5 h-5" />
+            <span className="font-medium text-lg hidden sm:inline">(360) 504-8767</span>
+            <span className="font-medium text-lg sm:hidden">Call Us</span>
+          </a>
+        </div>
+      </header>
+      
       {/* Hero Section - Grand Victorian Mansion with Pacific Northwest Evergreen Forest */}
+
       {/* Text positioned on left over forest area, house remains prominent in center-right */}
       <section className="relative min-h-screen flex items-center overflow-hidden">
         {/* Background Image - Local Victorian mansion with coniferous evergreen trees */}
